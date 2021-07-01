@@ -6,8 +6,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Item from './Item';
-import LoginControl from './Greeting';
+// import LoginControl from './Greeting';
 import Mailbox1 from './MailBox';
+import Welcome from './Welcome';
+import LoginControl from './LoginControl';
+import Clock from './Clock';
+import Section from './Section';
 
 // function Button(props) {
 //     const handleClick = (event, id) => {
@@ -48,17 +52,18 @@ const links = [
 // when loop is there use key
 const element = (
     <div>
-        {links.map((element) => (
+        {/* {links.map((element) => (
             <Item key={element.title} link={element.link} title={element.title} />
-        ))}
+        ))} */}
+        <Section id="efgh" />
     </div>
 );
 
-// ReactDOM.render(element, document.getElementById('root'));
-const messages = ['React', 'Re: React', 'Re:Re: React', 'Sumedha', 'DDD'];
+ReactDOM.render(element, document.getElementById('root'));
+// const messages = ['React', 'Re: React', 'Re:Re: React', 'Sumedha', 'DDD'];
 
 // ReactDOM.render(<LoginControl isLoggedIn={false} />, document.getElementById('root'));
-ReactDOM.render(<Mailbox1 unreadMessages={messages} />, document.getElementById('root'));
+// ReactDOM.render(<Mailbox1 unreadMessages={messages} />, document.getElementById('root'));
 // ReactDOM.render(
 //     // Try changing to isLoggedIn={true}:
 //     <Greeting isLoggedIn={true} />,
