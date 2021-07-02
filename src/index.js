@@ -11,7 +11,8 @@ import Mailbox1 from './MailBox';
 import Welcome from './Welcome';
 import LoginControl from './LoginControl';
 import Clock from './Clock';
-import Section from './Section';
+import Page from './Page';
+import NameForm from './NameForm';
 
 // function Button(props) {
 //     const handleClick = (event, id) => {
@@ -55,7 +56,7 @@ const element = (
         {/* {links.map((element) => (
             <Item key={element.title} link={element.link} title={element.title} />
         ))} */}
-        <Section id="efgh" />
+        <NameForm />
     </div>
 );
 
