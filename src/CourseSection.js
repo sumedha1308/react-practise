@@ -2,7 +2,7 @@
 import React from 'react';
 import Section from './Section';
 
-class Page extends React.Component {
+class CourseSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = { sectionId: 'abcd' };
@@ -31,4 +31,4 @@ class Page extends React.Component {
     }
 }
 
-export default Page;
+export default CourseSection;

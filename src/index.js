@@ -11,8 +11,11 @@ import Mailbox1 from './MailBox';
 import Welcome from './Welcome';
 import LoginControl from './LoginControl';
 import Clock from './Clock';
-import Page from './Page';
+import CourseSection from './CourseSection';
 import NameForm from './NameForm';
+import NavBar from './NavBar';
+import CustomRouter from './CustomRouter';
+// import { render } from '@testing-library/react';
 
 // function Button(props) {
 //     const handleClick = (event, id) => {
@@ -60,7 +63,7 @@ const element = (
     </div>
 );
 
-ReactDOM.render(element, document.getElementById('root'));
+// ReactDOM.render(element, document.getElementById('root'));
 // const messages = ['React', 'Re: React', 'Re:Re: React', 'Sumedha', 'DDD'];
 
 // ReactDOM.render(<LoginControl isLoggedIn={false} />, document.getElementById('root'));
@@ -70,3 +73,8 @@ ReactDOM.render(element, document.getElementById('root'));
 //     <Greeting isLoggedIn={true} />,
 //     document.getElementById('root'),
 // );
+// Code for Router
+
+const elementRouter = <CustomRouter />;
+
+ReactDOM.render(elementRouter, document.getElementById('root'));
