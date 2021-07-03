@@ -1,31 +1,26 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from './Section';
 
 class CourseSection extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { sectionId: 'abcd' };
+        // this.state = { sectionId: 'abcd' };
+        console.log(props.match.params.sectionId);
     }
 
     render() {
         return (
             <div>
-                <button
-                    onClick={() => {
-                        this.setState({ sectionId: 'abcd' });
-                    }}
-                >
-                    ABCD
-                </button>
-                <button
-                    onClick={() => {
-                        this.setState({ sectionId: 'efgh' });
-                    }}
-                >
-                    EFGH
-                </button>
-                <Section id={this.state.sectionId} />
+                <Link to="/course/abcd">
+                    <button>ABCD</button>
+                </Link>
+                <Link to="/course/efgh">
+                    <button>EFGH</button>
+                </Link>
+                <Section sectionId={this.props.match.params.sectionId} />
             </div>
         );
     }

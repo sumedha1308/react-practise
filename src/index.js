@@ -3,6 +3,7 @@
 /* eslint-disable no-shadow */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Item from './Item';
@@ -74,7 +75,24 @@ const element = (
 //     document.getElementById('root'),
 // );
 // Code for Router
-
-const elementRouter = <CustomRouter />;
+function App() {
+    return (
+        <Router>
+            {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+            <Switch>
+                <Route exact path="/course/:sectionId" component={CourseSection} />
+                <Route path="/clock" component={Clock} />
+                <Route exact path="/" component={LoginControl} />
+            </Switch>
+        </Router>
+    );
+}
+const elementRouter = (
+    <div>
+        <NavBar />
+        <App />
+    </div>
+);
 
 ReactDOM.render(elementRouter, document.getElementById('root'));

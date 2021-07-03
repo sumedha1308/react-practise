@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
@@ -5,30 +6,15 @@ import React from 'react';
 function NavBar(props) {
     return (
         <nav>
-            <button
-                onClick={() => {
-                    console.log('home clicked');
-                    props.onClick('home');
-                }}
-            >
-                Home
-            </button>
-            <button
-                onClick={() => {
-                    console.log('clock clicked');
-                    props.onClick('clock');
-                }}
-            >
-                Clock
-            </button>
-            <button
-                onClick={() => {
-                    console.log('course clicked');
-                    props.onClick('course-section');
-                }}
-            >
-                Course
-            </button>
+            <a href="/">
+                <button>Home</button>
+            </a>
+            <a href="/clock">
+                <button>Clock</button>
+            </a>
+            <a href="/course/abcd">
+                <button>Course</button>
+            </a>
         </nav>
     );
 }

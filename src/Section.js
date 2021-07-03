@@ -13,8 +13,8 @@ class Section extends React.Component {
     }
 
     fetchData() {
-        console.log('Fetching Data: ', this.props.id);
-        const sectionId = this.props.id;
+        console.log('Fetching Data: ', this.props.sectionId);
+        const sectionId = this.props.sectionId;
         // fetch(`/api/section/${sectionId}`)
         //     .then((res) => res.json())
         //     .then((data) => {
